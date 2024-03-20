@@ -120,9 +120,18 @@ btnSair.addEventListener("click", function(){
 });
 
 surpresinha.addEventListener("click", function(){
-    In1.value = Math.floor(Math.random() * 50 + 1);
-    In2.value = Math.floor(Math.random() * 50 + 1);
-    In3.value = Math.floor(Math.random() * 50 + 1);
-    In4.value = Math.floor(Math.random() * 50 + 1);
-    In5.value = Math.floor(Math.random() * 50 + 1);
+    var numerosGerados = new Set(); 
+    while (numerosGerados.size < 5) {
+        var numero = Math.floor(Math.random() * 50 + 1);
+        
+        if (!numerosGerados.has(numero)) {
+            numerosGerados.add(numero);
+        }
+    }
+    var numeros = Array.from(numerosGerados); 
+    In1.value = numeros[0];
+    In2.value = numeros[1];
+    In3.value = numeros[2];
+    In4.value = numeros[3];
+    In5.value = numeros[4];
 });

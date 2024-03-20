@@ -16,5 +16,16 @@ botaoFinalizar.addEventListener('click', function goToFinalizar() {
 })
 
 botaoSair.addEventListener('click', function goBack() {
-    location.href = 'index.html'
+    if(confirm('Deseja sair?')){
+        fetch('http://localhost:8080/sorteio/reiniciar-aposta')
+        .then(response => response.json())
+        .then(apostas => {
+            consoleg.log(apostas)
+        }).catch(error => console.log(error))
+
+        location.href = 'index.html'
+    }else{
+        location.href = 'home.html'
+    }
+    
 })
