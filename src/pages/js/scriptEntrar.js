@@ -1,5 +1,5 @@
-let botao = document.getElementById('btnEntrar')
+let botaoEntrar = document.getElementById('btnEntrar')
 
-botao.addEventListener('click', function Entrar() {
+botaoEntrar.addEventListener('click', function Entrar() {
     location.href = 'home.html'
 })
