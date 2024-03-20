@@ -38,7 +38,6 @@ button{
 button:hover{
     background-color: #00c97f;
     width: 70%;
-    padding: 15px 15px;
 }
 
 body{
@@ -97,17 +96,34 @@ input{
     width: 60px;
 }
 
+#btnSortear{
+    background-color: #353535;
+    border-radius: 50px;
+    width: 230px;
+    font-size: 15px;
+
+    &:hover{
+        font-size: 20px;
+        border-radius: 50px;
+        width: 330px;
+        font-size: 15px;
+        background-image: linear-gradient(to bottom right, #5d00ff, #3b52ff);
+    }
+}
+
 #btnSair{
     margin-top: 40px;
     background-color: #353535;
     border-radius: 50px;
     width: 100px;
     font-size: 15px;
-}
-#btnSair:hover{
-    background-color: red;
-    width: 150px;
-    padding: 15px 15px;
+
+    &:hover{
+        background-color: red;
+        color:#560000;
+        width: 150px;
+        padding: 10px 15px;
+    }
 }
 
 #surpresinha{
@@ -115,22 +131,30 @@ input{
     border-radius: 50px;
     width: 130px;
     font-size: 15px;
+
+    &:hover{
+        padding: 10px 20px;
+        border-radius: 50px;
+        width: 130px;
+        font-size: 15px;
+        background-image: linear-gradient(to bottom right, #5d00ff, #3b52ff);
+    }
 }
-#surpresinha:hover{
-    padding: 10px 20px;
-    border-radius: 50px;
-    width: 130px;
-    font-size: 15px;
-    background-image: linear-gradient(to bottom right, #5d00ff, #3b52ff);
-}
+
 
 #btnEntrar{
     background-color: #00c97f;
     width: 300px;
     font-size: 20px;
+
+    &:hover{
+        color: #006640;
+        width: 330px;
+        padding: 10px 50px;
+    }
 }
 
-#btnEntrar:hover{
-    width: 330px;
-    padding: 15px 15px;
+#container-resultadoSorteio{
+    width: 800px;
+    padding-left: 50px;
 }

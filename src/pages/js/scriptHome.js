@@ -16,7 +16,7 @@ botaoFinalizar.addEventListener('click', function goToFinalizar() {
 })
 
 botaoSair.addEventListener('click', function goBack() {
-    if(confirm('Deseja sair?')){
+    if(confirm('Deseja sair? As apostas serão redefinidas.')){
         fetch('http://localhost:8080/sorteio/reiniciar-aposta')
         .then(response => response.json())
         .then(apostas => {
