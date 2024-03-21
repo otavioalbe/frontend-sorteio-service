@@ -2,9 +2,15 @@ let botaoCadastro = document.getElementById('cadastrar')
 let botaoListar = document.getElementById('listar')
 let botaoFinalizar = document.getElementById('finalizar')
 let botaoSair = document.getElementById('btnSair')
+var apostaAberta = localStorage.getItem('apostaAberta')
+
 
 botaoCadastro.addEventListener('click', function goToCadastrar() {
-    location.href = 'cadastro.html'
+    if(apostaAberta==='true'){
+        location.href = 'cadastro.html'
+    }else{
+        alert('Apostas fechadas!')
+    }
 })
 
 botaoListar.addEventListener('click', function goToListar() {
@@ -23,6 +29,7 @@ botaoSair.addEventListener('click', function goBack() {
             consoleg.log(apostas)
         }).catch(error => console.log(error))
 
+        localStorage.setItem('apostaAberta', true);
         location.href = 'index.html'
     }else{
         location.href = 'home.html'

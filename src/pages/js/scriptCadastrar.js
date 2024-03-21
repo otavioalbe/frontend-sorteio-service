@@ -111,7 +111,7 @@ formulario.addEventListener("submit", function(event){
     }
     cadastrar();
     limpar();
-    alert("Cadastrado com sucesso!");
+    alert("Aposta cadastrada com sucesso!");
     
 });
 

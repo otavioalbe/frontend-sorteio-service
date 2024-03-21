@@ -154,6 +154,14 @@ input{
     }
 }
 
+#btnPremiacao{
+    background-color: #353535;
+
+    &:hover{
+        background-image: linear-gradient(to bottom right, #b87100, #e2ad00);
+    }
+}
+
 #container-resultadoSorteio{
     width: 800px;
     padding-left: 50px;
