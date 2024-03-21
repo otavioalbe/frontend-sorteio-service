@@ -43,7 +43,7 @@ function verificacaoCPF(){
         return false;
     }
     if(Icpf.value.length != 11){
-        alert("CPF inválido! Digite apenas os números do CPF.");
+        alert("CPF inválido!");
         return false;
     }
     return true;
