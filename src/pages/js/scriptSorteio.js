@@ -14,7 +14,24 @@ function listarApostas(){
 }
 listarApostas()
 
-
+btnPremiacao.addEventListener("click", function(){
+    let cpfUser = prompt("Digite seu cpf: ");
+    fetch("http://localhost:8080/sorteio/premiacao",{
+        headers:{
+            "Accept":"application/json",
+            "Content-Type":"application/json"
+        },
+        method: "POST",
+        body: cpfUser
+    }).then(function (res) { if(res.status == '200'){
+        window.location.href = "premiacao.html";
+    }
+    else if(res.status == '404'){
+        alert("Infelizmente não foi seu dia de sorte... Tente novamente na próxima!");
+    }} )
+    .catch(function (res) { console.log(res)} )
+    
+});
 
 btnSair.addEventListener("click", function(){
     window.location.href = "home.html";
